@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		DEC6FAF21EF4CC8E00BB1340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FAF11EF4CC8E00BB1340 /* AppDelegate.swift */; };
-		DEC6FAF41EF4CC8E00BB1340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FAF31EF4CC8E00BB1340 /* ViewController.swift */; };
 		DEC6FAF71EF4CC8E00BB1340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC6FAF51EF4CC8E00BB1340 /* Main.storyboard */; };
 		DEC6FAF91EF4CC8E00BB1340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC6FAF81EF4CC8E00BB1340 /* Assets.xcassets */; };
 		DEC6FAFC1EF4CC8E00BB1340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC6FAFA1EF4CC8E00BB1340 /* LaunchScreen.storyboard */; };
+		DEC6FB041EF4CC9F00BB1340 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB031EF4CC9F00BB1340 /* Transaction.swift */; };
+		DEC6FB061EF4CD8C00BB1340 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB051EF4CD8C00BB1340 /* Account.swift */; };
+		DEC6FB0A1EF4D35300BB1340 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB091EF4D35300BB1340 /* StorageController.swift */; };
+		DEC6FB0C1EF4DB4F00BB1340 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB0B1EF4DB4F00BB1340 /* StateController.swift */; };
+		DEC6FB0F1EF4ED7E00BB1340 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB0E1EF4ED7E00BB1340 /* AccountsViewController.swift */; };
+		DEC6FB111EF4ED9600BB1340 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB101EF4ED9600BB1340 /* CreateAccountViewController.swift */; };
+		DEC6FB131EF4EDA300BB1340 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB121EF4EDA300BB1340 /* TransactionsViewController.swift */; };
+		DEC6FB151EF4EDB000BB1340 /* CreateTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6FB141EF4EDB000BB1340 /* CreateTransactionViewController.swift */; };
+		E4702DC51EF760AE00309A28 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DC41EF760AE00309A28 /* Utilities.swift */; };
+		E4702DC71EF7670F00309A28 /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DC61EF7670F00309A28 /* NewTransactionView.swift */; };
+		E4702DC91EF76BF800309A28 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DC81EF76BF800309A28 /* AccountCell.swift */; };
+		E4702DCB1EF76E0500309A28 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DCA1EF76E0500309A28 /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DEC6FAEE1EF4CC8E00BB1340 /* ProMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC6FAF11EF4CC8E00BB1340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEC6FAF31EF4CC8E00BB1340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEC6FAF61EF4CC8E00BB1340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEC6FAF81EF4CC8E00BB1340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEC6FAFB1EF4CC8E00BB1340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEC6FAFD1EF4CC8E00BB1340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC6FB031EF4CC9F00BB1340 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		DEC6FB051EF4CD8C00BB1340 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		DEC6FB091EF4D35300BB1340 /* StorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
+		DEC6FB0B1EF4DB4F00BB1340 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		DEC6FB0E1EF4ED7E00BB1340 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		DEC6FB101EF4ED9600BB1340 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		DEC6FB121EF4EDA300BB1340 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		DEC6FB141EF4EDB000BB1340 /* CreateTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewController.swift; sourceTree = "<group>"; };
+		E4702DC41EF760AE00309A28 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E4702DC61EF7670F00309A28 /* NewTransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
+		E4702DC81EF76BF800309A28 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		E4702DCA1EF76E0500309A28 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +76,49 @@
 		DEC6FAF01EF4CC8E00BB1340 /* ProMVC */ = {
 			isa = PBXGroup;
 			children = (
+				DEC6FB0D1EF4ED5E00BB1340 /* ViewController */,
+				DEC6FB081EF4D2A400BB1340 /* Model Controller */,
+				DEC6FB071EF4CE2000BB1340 /* Model */,
 				DEC6FAF11EF4CC8E00BB1340 /* AppDelegate.swift */,
-				DEC6FAF31EF4CC8E00BB1340 /* ViewController.swift */,
+				E4702DC41EF760AE00309A28 /* Utilities.swift */,
 				DEC6FAF51EF4CC8E00BB1340 /* Main.storyboard */,
 				DEC6FAF81EF4CC8E00BB1340 /* Assets.xcassets */,
 				DEC6FAFA1EF4CC8E00BB1340 /* LaunchScreen.storyboard */,
 				DEC6FAFD1EF4CC8E00BB1340 /* Info.plist */,
 			);
 			path = ProMVC;
+			sourceTree = "<group>";
+		};
+		DEC6FB071EF4CE2000BB1340 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC6FB031EF4CC9F00BB1340 /* Transaction.swift */,
+				DEC6FB051EF4CD8C00BB1340 /* Account.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEC6FB081EF4D2A400BB1340 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEC6FB091EF4D35300BB1340 /* StorageController.swift */,
+				DEC6FB0B1EF4DB4F00BB1340 /* StateController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		DEC6FB0D1EF4ED5E00BB1340 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEC6FB0E1EF4ED7E00BB1340 /* AccountsViewController.swift */,
+				DEC6FB101EF4ED9600BB1340 /* CreateAccountViewController.swift */,
+				DEC6FB121EF4EDA300BB1340 /* TransactionsViewController.swift */,
+				DEC6FB141EF4EDB000BB1340 /* CreateTransactionViewController.swift */,
+				E4702DC61EF7670F00309A28 /* NewTransactionView.swift */,
+				E4702DC81EF76BF800309A28 /* AccountCell.swift */,
+				E4702DCA1EF76E0500309A28 /* TransactionCell.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +194,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEC6FAF41EF4CC8E00BB1340 /* ViewController.swift in Sources */,
+				DEC6FB111EF4ED9600BB1340 /* CreateAccountViewController.swift in Sources */,
+				DEC6FB0C1EF4DB4F00BB1340 /* StateController.swift in Sources */,
+				DEC6FB061EF4CD8C00BB1340 /* Account.swift in Sources */,
 				DEC6FAF21EF4CC8E00BB1340 /* AppDelegate.swift in Sources */,
+				DEC6FB041EF4CC9F00BB1340 /* Transaction.swift in Sources */,
+				E4702DC91EF76BF800309A28 /* AccountCell.swift in Sources */,
+				E4702DC71EF7670F00309A28 /* NewTransactionView.swift in Sources */,
+				DEC6FB0F1EF4ED7E00BB1340 /* AccountsViewController.swift in Sources */,
+				DEC6FB131EF4EDA300BB1340 /* TransactionsViewController.swift in Sources */,
+				E4702DCB1EF76E0500309A28 /* TransactionCell.swift in Sources */,
+				DEC6FB0A1EF4D35300BB1340 /* StorageController.swift in Sources */,
+				E4702DC51EF760AE00309A28 /* Utilities.swift in Sources */,
+				DEC6FB151EF4EDB000BB1340 /* CreateTransactionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +370,7 @@
 				DEC6FB021EF4CC8E00BB1340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
