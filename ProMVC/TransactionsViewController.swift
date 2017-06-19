@@ -22,6 +22,7 @@ class TransactionsViewController: UIViewController {
         super.viewDidLoad()
         numberLabel.text = account.number.accountNumberFormatting
         navigationItem.title = account.name
+//        automaticallyAdjustsScrollViewInsets = false
     }
 
     override func didReceiveMemoryWarning() {
