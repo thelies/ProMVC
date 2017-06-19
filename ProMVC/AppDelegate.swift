@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Appearance.setGlobalAppearance()
+        let initialController = window?.rootViewController as! UINavigationController
+        let accountsController = initialController.viewControllers.first as! AccountsViewController
+        accountsController.stateController = StateController(storageController: StorageController())
         return true
     }
 
@@ -44,3 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+struct Appearance {
+    static func setGlobalAppearance() {
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barTintColor = .skyBlue
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    }
+}

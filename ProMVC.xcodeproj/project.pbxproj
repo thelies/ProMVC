@@ -23,6 +23,8 @@
 		E4702DC71EF7670F00309A28 /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DC61EF7670F00309A28 /* NewTransactionView.swift */; };
 		E4702DC91EF76BF800309A28 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DC81EF76BF800309A28 /* AccountCell.swift */; };
 		E4702DCB1EF76E0500309A28 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DCA1EF76E0500309A28 /* TransactionCell.swift */; };
+		E4702DCD1EF7788700309A28 /* AccountsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DCC1EF7788700309A28 /* AccountsDataSource.swift */; };
+		E4702DD01EF783DF00309A28 /* TransactionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4702DCF1EF783DF00309A28 /* TransactionsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		E4702DC61EF7670F00309A28 /* NewTransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
 		E4702DC81EF76BF800309A28 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		E4702DCA1EF76E0500309A28 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		E4702DCC1EF7788700309A28 /* AccountsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsDataSource.swift; sourceTree = "<group>"; };
+		E4702DCF1EF783DF00309A28 /* TransactionsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		DEC6FAF01EF4CC8E00BB1340 /* ProMVC */ = {
 			isa = PBXGroup;
 			children = (
+				E4702DCE1EF77A3100309A28 /* View */,
 				DEC6FB0D1EF4ED5E00BB1340 /* ViewController */,
 				DEC6FB081EF4D2A400BB1340 /* Model Controller */,
 				DEC6FB071EF4CE2000BB1340 /* Model */,
@@ -114,11 +119,20 @@
 				DEC6FB101EF4ED9600BB1340 /* CreateAccountViewController.swift */,
 				DEC6FB121EF4EDA300BB1340 /* TransactionsViewController.swift */,
 				DEC6FB141EF4EDB000BB1340 /* CreateTransactionViewController.swift */,
+				E4702DCC1EF7788700309A28 /* AccountsDataSource.swift */,
+				E4702DCF1EF783DF00309A28 /* TransactionsDataSource.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E4702DCE1EF77A3100309A28 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				E4702DC61EF7670F00309A28 /* NewTransactionView.swift */,
 				E4702DC81EF76BF800309A28 /* AccountCell.swift */,
 				E4702DCA1EF76E0500309A28 /* TransactionCell.swift */,
 			);
-			name = ViewController;
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +212,14 @@
 				DEC6FB0C1EF4DB4F00BB1340 /* StateController.swift in Sources */,
 				DEC6FB061EF4CD8C00BB1340 /* Account.swift in Sources */,
 				DEC6FAF21EF4CC8E00BB1340 /* AppDelegate.swift in Sources */,
+				E4702DD01EF783DF00309A28 /* TransactionsDataSource.swift in Sources */,
 				DEC6FB041EF4CC9F00BB1340 /* Transaction.swift in Sources */,
 				E4702DC91EF76BF800309A28 /* AccountCell.swift in Sources */,
 				E4702DC71EF7670F00309A28 /* NewTransactionView.swift in Sources */,
 				DEC6FB0F1EF4ED7E00BB1340 /* AccountsViewController.swift in Sources */,
 				DEC6FB131EF4EDA300BB1340 /* TransactionsViewController.swift in Sources */,
 				E4702DCB1EF76E0500309A28 /* TransactionCell.swift in Sources */,
+				E4702DCD1EF7788700309A28 /* AccountsDataSource.swift in Sources */,
 				DEC6FB0A1EF4D35300BB1340 /* StorageController.swift in Sources */,
 				E4702DC51EF760AE00309A28 /* Utilities.swift in Sources */,
 				DEC6FB151EF4EDB000BB1340 /* CreateTransactionViewController.swift in Sources */,

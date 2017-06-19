@@ -9,11 +9,21 @@
 import UIKit
 
 class AccountsViewController: UIViewController {
+    
+    @IBOutlet fileprivate weak var tableView: UITableView!
 
+    var stateController: StateController!
+    fileprivate var dataSource: AccountsDataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dataSource = AccountsDataSource(accounts: stateController.accounts)
+        tableView.dataSource = dataSource
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +31,30 @@ class AccountsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier! {
+        case "CreateAccountSegue":
+            if let navigationController = segue.destination as? UINavigationController,
+                let createAccountViewController = navigationController.viewControllers.first as? CreateAccountViewController {
+                createAccountViewController.stateController = stateController
+            }
+        case "TransactionSegue":
+            if let transactionsViewController = segue.destination as? TransactionsViewController,
+                let selectedIndex = tableView.indexPathForSelectedRow?.row {
+                let account = dataSource.accounts[selectedIndex]
+                transactionsViewController.account = account
+                transactionsViewController.stateController = stateController
+            }
+        default:
+            break
+        }
     }
-    */
-
+    
+    @IBAction func cancelAccountCreation(_ segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func saveAccount(_ segue: UIStoryboardSegue) {
+        
+    }
 }

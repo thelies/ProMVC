@@ -9,6 +9,9 @@
 import UIKit
 
 class TransactionCell: UITableViewCell {
+    
+    static let identifier = "TransactionCell"
+    
    	@IBOutlet weak var circleView: UIView!
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!

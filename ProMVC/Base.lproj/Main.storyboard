@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="b5x-7E-sWJ" customClass="AccountCell" customModule="ProMVC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="144" id="b5x-7E-sWJ" customClass="AccountCell" customModule="ProMVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5x-7E-sWJ" id="6tj-SR-5C3">
@@ -98,7 +98,7 @@
                                             <outlet property="nameLabel" destination="WML-30-4BN" id="mMZ-DF-dF4"/>
                                             <outlet property="numberLabel" destination="0BU-eV-hcf" id="G35-yD-mfO"/>
                                             <outlet property="totalLabel" destination="ofE-Hh-n0D" id="LU0-hW-4oh"/>
-                                            <segue destination="gbK-Xv-7ZN" kind="show" id="KBv-gi-qFx"/>
+                                            <segue destination="gbK-Xv-7ZN" kind="show" identifier="TransactionSegue" id="KBv-gi-qFx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,10 +115,13 @@
                     <navigationItem key="navigationItem" title="Accounts" id="8TW-3b-2sY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7EH-9H-6gT">
                             <connections>
-                                <segue destination="Pco-0l-gKh" kind="show" id="8ZF-ih-juG"/>
+                                <segue destination="Pco-0l-gKh" kind="show" identifier="CreateAccountSegue" id="8ZF-ih-juG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="V8F-yq-dqR" id="kjY-10-Yzr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSv-xK-Zmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +174,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="y9r-BF-mKy" customClass="TransactionCell" customModule="ProMVC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="90" id="y9r-BF-mKy" customClass="TransactionCell" customModule="ProMVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="118" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y9r-BF-mKy" id="JGg-vZ-dRZ">
@@ -257,6 +260,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberLabel" destination="Iyf-Jh-te7" id="AOg-MA-yCG"/>
+                        <outlet property="tableView" destination="AHw-ej-WWo" id="DyN-e0-Cyt"/>
+                        <outlet property="totalLabel" destination="YAV-aK-nLu" id="SB8-gh-8ZH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23J-qG-m3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,10 +629,14 @@
                     <navigationItem key="navigationItem" title="New Transaction" id="cqN-qU-HbM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KHG-sS-5q8">
                             <connections>
-                                <segue destination="9jr-kb-hFj" kind="unwind" unwindAction="cancelTransactionCreation:" id="izJ-2o-f4C"/>
+                                <segue destination="9jr-kb-hFj" kind="unwind" unwindAction="cancelTransactionCreation:" id="MZL-hy-Egg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FV2-nF-XC6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FV2-nF-XC6">
+                            <connections>
+                                <segue destination="9jr-kb-hFj" kind="unwind" identifier="SaveTransactionSegue" unwindAction="saveTransaction:" id="WBf-BA-eo3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb6-4x-wF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -694,10 +706,14 @@
                     <navigationItem key="navigationItem" title="New Account" id="ZRc-Mh-iSt">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EjB-kF-dub">
                             <connections>
-                                <segue destination="W6Q-S6-xCv" kind="unwind" unwindAction="cancelAccountCreation:" id="b0T-i7-5U2"/>
+                                <segue destination="W6Q-S6-xCv" kind="unwind" unwindAction="cancelAccountCreation:" id="buX-6J-oNy"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eem-vP-xPb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eem-vP-xPb">
+                            <connections>
+                                <segue destination="W6Q-S6-xCv" kind="unwind" identifier="SaveAccountSegue" unwindAction="saveAccount:" id="4OC-W9-w8z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bankTextField" destination="iOT-Gf-vVP" id="jhk-qm-TsJ"/>

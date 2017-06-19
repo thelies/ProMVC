@@ -14,6 +14,8 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet fileprivate weak var bankTextField: UITextField!
     @IBOutlet fileprivate weak var numberTextField: UITextField!
 
+    var stateController: StateController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +33,14 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func saveAccount(_ segue: UIStoryboardSegue) {
     
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "SaveAccountSegue" else {
+            return
+        }
+        
+        let account = Account(name: nameTextField.text ?? "", bank: bankTextField.text ?? "", number: numberTextField.text ?? "", transactions: [])
+        stateController.add(account)
     }
 }

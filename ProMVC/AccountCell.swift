@@ -9,6 +9,9 @@
 import UIKit
 
 class AccountCell: UITableViewCell {
+    
+    static let identifier = "AccountCell"
+    
     @IBOutlet fileprivate weak var nameLabel: UILabel!
     @IBOutlet fileprivate weak var totalLabel: UILabel!
     @IBOutlet fileprivate weak var bankLabel: UILabel!
